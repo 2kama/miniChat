@@ -1,0 +1,173 @@
+
+
+
+//variables
+
+$vars: (
+    fc: #242021,
+    blue: #3d91c6
+
+);
+
+@mixin var($property, $variable) {
+    #{$property}: map-get($vars, $variable);
+    #{$property}: var(--#{$variable});
+}
+
+:root {
+    @each $property, $value in $vars {
+        --#{$property}: #{$value};
+    }
+}
+
+
+
+//mixin
+
+@mixin mQ($arg) {
+    @media screen and (max-width: $arg) {
+        @content;
+    }
+}
+
+@mixin crossBrowser($tweak, $property) {
+    -webkit-#{$tweak}: $property;
+        -ms-#{$tweak}: $property;
+            #{$tweak}: $property;
+}
+
+@mixin button {
+    @include crossBrowser(border-radius, 20px);
+    @include var(color, pure-white);
+    @include var(font-size, fs1);
+    height: 40px;
+}
+
+
+@mixin square ($size) {
+    height: $size;
+    width: $size;
+}
+
+
+
+body {
+    font-family: "Open Sans";
+    background: #efefef;
+}
+
+
+.mainHouse {
+    height: 100vh;
+    background: url("../img/hoot.png") no-repeat center center;
+}
+
+
+button {
+    @include crossBrowser(border-radius, 5px);
+    @include var(background, blue);
+    color: #fff;
+}
+
+
+
+.insideForms {
+    background: #fff;
+    padding: 50px;
+    box-shadow: 0 3px 3px rgba(153, 153, 153, 0.4);
+    margin-top: 20vh;
+
+    .list-group {
+        flex-direction: row;
+        .list-group-item {
+            border: none;
+            text-align: center;
+            @include var(color, fc);
+            &.active {
+                border-bottom: 2px solid #3d91c6;
+                @include var(color, blue);
+                background: transparent;
+            }
+        }
+    }
+
+    .tab-content {
+        padding: 50px 0px;
+        input {
+            margin-bottom: 20px;
+            height: 60px;
+            padding: 10px;
+            font-size: 18px;
+        }
+        button {
+            height: 60px;
+            font-size: 19px;
+        }
+    }
+}
+
+.offline, .online {
+    display: none;
+}
+
+.chatArea {
+    background: #fff;
+    padding: 50px;
+    box-shadow: 0 3px 3px rgba(153, 153, 153, 0.4);
+    margin-top: 10vh;
+
+    .username {
+        background: #ddd;
+        border: none;
+        margin-bottom: 30px;
+    }
+
+    .chats {
+        height: 450px;
+        overflow-x: hidden;
+        overflow-y: auto;
+
+        .otherChat {
+            background: #eee;
+            font-size: 13px;
+            padding: 10px;
+            margin-bottom: 7px;
+            span {
+                font-weight: bold;
+                padding: 5px;
+            }
+            p {
+                padding: 5px;
+                margin: 0;
+            }
+        }
+
+        .myChat {
+            @include var(background, blue);
+            color: #fff;
+            font-size: 13px;
+            padding: 10px;
+            margin-bottom: 7px;
+            span {
+                font-weight: bold;
+                padding: 5px;
+            }
+            p {
+                padding: 5px;
+                margin: 0;
+            }
+        }
+    }
+
+    .sendMsg {
+        height: 70px;
+    }
+}
+
+
+.alert {
+    position: absolute;
+    bottom: 20px;
+    text-align: center;
+    display: none;
+}

@@ -1,0 +1,98 @@
+:root {
+  --fc: #242021;
+  --blue: #3d91c6; }
+
+body {
+  font-family: "Open Sans";
+  background: #efefef; }
+
+.mainHouse {
+  height: 100vh;
+  background: url("../img/hoot.png") no-repeat center center; }
+
+button {
+  -webkit-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  background: #3d91c6;
+  background: var(--blue);
+  color: #fff; }
+
+.insideForms {
+  background: #fff;
+  padding: 50px;
+  box-shadow: 0 3px 3px rgba(153, 153, 153, 0.4);
+  margin-top: 20vh; }
+  .insideForms .list-group {
+    flex-direction: row; }
+    .insideForms .list-group .list-group-item {
+      border: none;
+      text-align: center;
+      color: #242021;
+      color: var(--fc); }
+      .insideForms .list-group .list-group-item.active {
+        border-bottom: 2px solid #3d91c6;
+        color: #3d91c6;
+        color: var(--blue);
+        background: transparent; }
+  .insideForms .tab-content {
+    padding: 50px 0px; }
+    .insideForms .tab-content input {
+      margin-bottom: 20px;
+      height: 60px;
+      padding: 10px;
+      font-size: 18px; }
+    .insideForms .tab-content button {
+      height: 60px;
+      font-size: 19px; }
+
+.offline, .online {
+  display: none; }
+
+.chatArea {
+  background: #fff;
+  padding: 50px;
+  box-shadow: 0 3px 3px rgba(153, 153, 153, 0.4);
+  margin-top: 10vh; }
+  .chatArea .username {
+    background: #ddd;
+    border: none;
+    margin-bottom: 30px; }
+  .chatArea .chats {
+    height: 450px;
+    overflow-x: hidden;
+    overflow-y: auto; }
+    .chatArea .chats .otherChat {
+      background: #eee;
+      font-size: 13px;
+      padding: 10px;
+      margin-bottom: 7px; }
+      .chatArea .chats .otherChat span {
+        font-weight: bold;
+        padding: 5px; }
+      .chatArea .chats .otherChat p {
+        padding: 5px;
+        margin: 0; }
+    .chatArea .chats .myChat {
+      background: #3d91c6;
+      background: var(--blue);
+      color: #fff;
+      font-size: 13px;
+      padding: 10px;
+      margin-bottom: 7px; }
+      .chatArea .chats .myChat span {
+        font-weight: bold;
+        padding: 5px; }
+      .chatArea .chats .myChat p {
+        padding: 5px;
+        margin: 0; }
+  .chatArea .sendMsg {
+    height: 70px; }
+
+.alert {
+  position: absolute;
+  bottom: 20px;
+  text-align: center;
+  display: none; }
+
+/*# sourceMappingURL=main.css.map */

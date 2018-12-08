@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Cyclolife - Wheels to dream</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  </head>
+  <body>
+
+
+
+        <!-- main wrapper-->
+        <div class="container mainHouse">
+
+
+
+              <div class="col-md-6 offset-md-3 offline">
+
+                  <div class="row">
+
+                      <div class="col-md-12 insideForms">
+
+                              <!-- List group -->
+                              <div class="list-group" id="myList" role="tablist">
+                                <a class="list-group-item list-group-item-action active" data-toggle="list" href="#login" role="tab">LOGIN</a>
+                                <a class="list-group-item list-group-item-action" data-toggle="list" href="#register" role="tab">REGISTER</a>
+                              </div>
+                              
+                              <!-- Tab panes -->
+                              <div class="tab-content">
+                                <!--login box-->
+                                <div class="tab-pane active" id="login" role="tabpanel">
+                                    <form action="" class="row loginForm">
+                                        <div class="col-md-12">
+                                            <input type="text" class="form-control" class="loginEmail" placeholder="Email">
+                                        </div>
+                                        <div class="col-md-12">
+                                            <input type="password" class="form-control" class="loginPassword" placeholder="Password">
+                                        </div>
+                                        <div class="col-md-12">
+                                            <button type="submit" class="btn btn-block">LOGIN</button>
+                                        </div>
+                                    </form>
+                                </div>
+                                <!--end of logi box-->
+
+                                <!--register form-->
+                                <div class="tab-pane" id="register" role="tabpanel">
+                                    <form action="" class="row registerForm">
+                                        <div class="col-md-12">
+                                            <input type="text" class="form-control" class="registerEmail" placeholder="Email">
+                                        </div>
+                                        <div class="col-md-12">
+                                            <input type="password" class="form-control" class="registerPassword" placeholder="Password">
+                                        </div>
+                                        <div class="col-md-12">
+                                            <input type="password" class="form-control" class="repeatPassword" placeholder="Password">
+                                        </div>
+                                        <div class="col-md-12">
+                                            <button type="submit" class="btn btn-block">REGISTER</button>
+                                        </div>
+                                    </form>
+                                </div>
+                                <!--end of register form-->
+                              </div>
+
+                      </div>
+
+                  </div>
+
+              </div>
+
+
+
+
+
+              <div class="col-md-8 offset-md-2 online">
+                  <div class="row">
+                        <!-- chat area-->
+                        <div class="col-md-12 chatArea">
+
+                              <div class="row">
+
+                                    <div class="col-md-8 offset-md-2">
+                                        <input type="text" class="form-control username">
+                                    </div>
+
+                                    <div class="col-md-2">
+                                        <button class="btn btn-danger logout">Logout</button>
+                                    </div>
+                                    
+                                    <!---group chats-->
+                                    <div class="col-md-12 chats">
+                                        <div class="row">
+
+                                            <!--chatsGotten-->
+                                            <div class="col-md-9 otherChat">
+                                                <span>TheOtherUser</span>
+                                                <p>This is a chat by the other users</p>
+                                            </div>
+
+                                            <div class="col-md-9 offset-md-3 myChat">
+                                                <span>MyName</span>
+                                                <p>This is a chat by me</p>
+                                            </div>
+                                            <!--chatsGotten-->
+
+                                         </div>
+                                    </div>
+                                    <!--end of group chats-->
+
+
+                                    <!--type your message here-->
+                                    <div class="col-md-12">
+                                        <textarea name="" id="" cols="30" rows="10" class="form-control sendMsg" placeholder="type a message..."></textarea>
+                                    </div>
+                                    <!--end of type your message here-->
+
+                              </div>
+
+                        </div>
+                        <!--end of chat area-->
+
+                  </div>
+              </div>
+
+
+
+
+              <!--alerts-->
+              <div class="col-md-6 offset-md-1 alert alert-danger"></div>
+
+              <div class="col-md-6 offset-md-1 alert alert-success"></div>
+              <!--end of alerts-->
+
+
+
+        </div>
+        <!--end of main wrapper-->
+
+    
+    
+    <script src="js/jquery.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
